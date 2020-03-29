@@ -14,7 +14,7 @@ The following things are needed:
 
 - A domain name (e.g. covid-self-report.ch)
 - A hosting server (we are using firebase, but it's not mandatory)
-- An instance of [self-report-backend](https://github.com/ch-covid-19/self-report-backend) running
+- An instance of [self-report-backend](https://github.com/ch-covid-19/self-report-backend) running (or develop your own backend)
 - A reCAPTCHA API configuration
 - A reports data source
 - A geocoding data source
@@ -65,11 +65,12 @@ The frontend uses vue-cli. Please refer to the [official documentation](https://
 #### Configuration
 
 1. Setup the data source and geocoding data URLs
-2. Set the recaptcha key (not the secret) with the value from the reCAPTCHA console.
-3. List the languages you need
-4. Set the github repository of your fork for the issues reporting
-5. Set the social links for the desired platforms
-6. Configure the URL for the backend endpoint to your backend instance.
+2. Set the map default position and zoom level
+3. Set the recaptcha key (not the secret) with the value from the reCAPTCHA console.
+4. List the languages you need
+5. Set the github repository of your fork for the issues reporting
+6. Set the social links for the desired platforms
+7. Configure the URL for the backend endpoint to your backend instance.
 
 ### Notes on settng up NPM on Ubuntu ###
 1. `sudo apt-get install npm`

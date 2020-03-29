@@ -69,8 +69,6 @@
   var _tileLayers = [];
 
   var _today = new Date();
-  var _yesterday = new Date();
-  _yesterday.setDate(_yesterday.getDate() - 1);
 
   export default {
     name: "visualize",
@@ -109,7 +107,7 @@
           {
             id: 'healthy',
             label: 'visualize.layerHealthy',
-            value: (entry) => entry.total_healthy,
+            value: (entry) => entry.healthy,
             sizeRatio: 1,
             color: 'blue',
             buttonColor: 'info',
@@ -119,7 +117,7 @@
           {
             id: 'sick_guess_no_corona',
             label: 'visualize.layerSickNoCovid',
-            value: (entry) => entry.total_sick_guess_no_corona,
+            value: (entry) => entry.sick_guess_no_corona,
             sizeRatio: 1,
             color: 'blue',
             buttonColor: 'info',
@@ -129,7 +127,7 @@
           {
             id: 'sick_guess_corona',
             label: 'visualize.layerSickCovid',
-            value: (entry) => entry.total_sick_guess_corona,
+            value: (entry) => entry.sick_guess_corona,
             sizeRatio: 1,
             color: 'orangered',
             buttonColor: 'warning',
@@ -139,7 +137,7 @@
           {
             id: 'sick_corona_confirmed',
             label: 'visualize.layerSickCovidConfirmed',
-            value: (entry) => entry.total_sick_corona_confirmed,
+            value: (entry) => entry.sick_corona_confirmed,
             sizeRatio: 1,
             color: 'red',
             buttonColor: 'danger',
@@ -149,7 +147,7 @@
           {
             id: 'recovered_not_confirmed',
             label: 'visualize.layerRecovered',
-            value: (entry) => entry.total_recovered_not_confirmed,
+            value: (entry) => entry.recovered_not_confirmed,
             sizeRatio: 1,
             color: 'green',
             buttonColor: 'success',
@@ -159,7 +157,7 @@
           {
             id: 'recovered_confirmed',
             label: 'visualize.layerRecoveredConfirmed',
-            value: (entry) => entry.total_recovered_confirmed,
+            value: (entry) => entry.recovered_confirmed,
             sizeRatio: 1,
             color: 'green',
             buttonColor: 'success',
@@ -219,6 +217,7 @@
       },
       loadGeocode: function (url) {
         return new Promise(function (resolve, reject) {
+          console.log(`Getting geocoding data at '${url}'`);
           Papa.parse(url, {
             download: true,
             header: true,
@@ -226,9 +225,35 @@
             complete: (content, file) => {
 
               const geocoding = {};
+
               for (const location of content.data) {
-                location.coordinates = [+location.latitude, +location.longitude];
-                geocoding[location.npa_plz] = location;
+
+                if (location.postal_code === null) {
+                  continue;
+                }
+
+                if (location.longitude && location.latitude) {
+                  location.coordinates = [+location.longitude, +location.latitude];
+                } else {
+                  continue;
+                }
+
+                if (location.region_id) {
+                  const regions = location.region_id.split('::');
+
+                  location.regions = [];
+                  location.places = [];
+                  for (const [i, region] of regions) {
+
+                    if (i === regions.length - 1) {
+                      location.places = location.regions[location.regions.length - 1].split('||');
+                    } else {
+                      location.regions.push(region);
+                    }
+                  }
+                }
+
+                geocoding[location.postal_code] = location;
               }
 
               resolve(geocoding)
@@ -247,12 +272,12 @@
               const data = content.data;
 
               for (const entry of data) {
-                entry.total_healthy = +entry.total_healthy;
-                entry.total_sick_guess_no_corona = +entry.total_sick_guess_no_corona;
-                entry.total_sick_guess_corona = +entry.total_sick_guess_corona;
-                entry.total_sick_corona_confirmed = +entry.total_sick_corona_confirmed;
-                entry.total_recovered_not_confirmed = +entry.total_recovered_not_confirmed;
-                entry.total_recovered_confirmed = +entry.total_recovered_confirmed;
+                entry.healthy = +entry.healthy;
+                entry.sick_guess_no_corona = +entry.sick_guess_no_corona;
+                entry.sick_guess_corona = +entry.sick_guess_corona;
+                entry.sick_corona_confirmed = +entry.sick_corona_confirmed;
+                entry.recovered_not_confirmed = +entry.recovered_not_confirmed;
+                entry.recovered_confirmed = +entry.recovered_confirmed;
               }
 
               resolve(data);
@@ -285,23 +310,21 @@
 
         _map = L.map('leaflet-map', {
           preferCanvas: true,
-        }).setView([22,78], 5);
+        }).setView([
+          process.env.VUE_APP_VISU_MAP_CENTER_LATITUDE,
+          process.env.VUE_APP_VISU_MAP_CENTER_LONGITUDE
+        ], process.env.VUE_APP_VISU_MAP_ZOOM_LEVEL);
 
         _tileLayers.push(L.tileLayer(this.mapBaseLayerUrl, {
           attribution: `&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`,
         }).addTo(_map));
 
-        try {
-          _data = await this.loadData(this.dataSourceUrl);
-          this.dataLoaded = true;
+        _data = await this.loadData(this.dataSourceUrl);
+        this.dataLoaded = true;
 
-          this.allowedDates = this.computeAllowedDates(_data);
+        this.allowedDates = this.computeAllowedDates(_data);
 
-          this.buildLayers(null, this.dateFilter);
-
-        } catch (error) {
-          console.error(error);
-        }
+        this.buildLayers(null, this.dateFilter);
       },
       buildLayers: function (selectedDates, dateStr, instance) {
 
@@ -327,12 +350,12 @@
             continue;
           }
 
-          totalReports += entry.total_healthy +
-            entry.total_sick_guess_no_corona +
-            entry.total_sick_guess_corona +
-            entry.total_sick_corona_confirmed +
-            entry.total_recovered_not_confirmed +
-            entry.total_recovered_confirmed;
+          totalReports += entry.healthy +
+            entry.sick_guess_no_corona +
+            entry.sick_guess_corona +
+            entry.sick_corona_confirmed +
+            entry.recovered_not_confirmed +
+            entry.recovered_confirmed;
 
           for (const layerDefinition of this.layersDefinifion) {
             const markerSize = layerDefinition.value(entry) * layerDefinition.sizeRatio;
@@ -347,7 +370,6 @@
         }
 
         this.totalReports = totalReports;
-        console.log(totalReports);
 
         let ignored = 0;
         for (const entry of _data) {
@@ -356,7 +378,7 @@
             continue;
           }
 
-          const geocoding = this.geocoding[entry.npa_plz];
+          const geocoding = this.geocoding[entry.postal_code];
 
           if (!geocoding) {
             ignored++;
@@ -364,7 +386,7 @@
           }
 
           let popup = `
-            <h4>${entry.npa_plz} ${geocoding.town} (${geocoding.state})</h4>
+            <h4>${entry.postal_code} ${geocoding.places ? geocoding.places.join(', ') : ''}</h4>
             <table class="data">`;
 
           for (const layerDefinition of this.layersDefinifion) {
@@ -392,7 +414,7 @@
                 radius: markerSize > 0 ? Math.max(markerSize, this.minBubbleSize) : 0,
               }).bindPopup(popup));
             } catch (error) {
-              console.log(entry, error);
+              console.error(entry, error);
             }
           }
         }
@@ -403,6 +425,7 @@
 
         const overlays = {};
         for (const layerDefinition of this.layersDefinifion) {
+
           layerDefinition.data.layer = L.layerGroup(layerDefinition.data.markers, options);
 
           if (activeLayersBackup.length > 0) {
