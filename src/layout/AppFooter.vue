@@ -36,7 +36,7 @@
         <div class="col-md-12">
           <div class="copyright">
             &copy; {{year}}
-            {{ $t('app.title') }} (v{{ version }}) | Built with the awesome theme of
+            Self-report (v{{ version }}) | Built with the awesome theme of
             <a href="https://www.creative-tim.com/product/vue-argon-design-system">Creative Tim</a>
           </div>
 

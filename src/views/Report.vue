@@ -182,7 +182,6 @@
                              icon="fa fa-send">
                   {{ $t('report.send') }} <i v-if="sending" class="fa fa-spinner fa-pulse"></i>
                 </base-button>
-                <p><small v-if="dev">Development report, will be ignored in aggregation</small></p>
               </div>
             </div>
 
@@ -246,8 +245,6 @@
   import Modal from '@/components/Modal.vue';
   import newGithubIssueUrl from 'new-github-issue-url';
 
-  import {geocoding} from '@/assets/geocoding';
-
   export default {
     name: "report",
     components: {
@@ -307,8 +304,6 @@
         },
         sending: false,
 
-        dev: process.env.NODE_ENV === 'development',
-
         /*
         * 0 = not sick
         * 1 = sick without Covid
@@ -321,7 +316,7 @@
     },
     computed: {
       validPostalCode: function () {
-        return (this.reportData.postalCode.length === 6 && !isNaN(this.reportData.postalCode) && geocoding[+this.reportData.postalCode]);
+        return (this.reportData.postalCode.length === 6 && !isNaN(this.reportData.postalCode));
       },
       daysSinceLastReport: function () {
 

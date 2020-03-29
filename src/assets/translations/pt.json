@@ -1,0 +1,93 @@
+{
+    "app": {
+        "language":"Português",
+        "title": "Autoavaliação",
+        "footer": {
+            "support": "Agradecemos o seu apoio!",
+            "contact": "Contacte conosco por qualquer uma destas plataformas.",
+            "whatsappshare": "Informe sobre o seu estado de saúde para ajudar a combater o Covid-19!"
+        },
+        "yes": "Sim",
+        "no": "Não"
+    },
+    "renewReport": {
+        "comingBack": "Obrigado por ter voltado",
+        "daysSince": "A sua última avaliação ocorreu faz dias. ",
+        "explainOther": "Caso você queira avaliar outra pessoa, por favor, use outro celular, tablet ou computador. ",
+        "click": "Clique",
+        "here": "aqui",
+        "ifNotYou": "caso não tenha sido você."
+    },
+    "report": {
+        "title": "Avaliação",
+        "intro": "Ajude na luta contra o novo Coronavírus na Suíça fazendo a autoavaliação do seu estado de saúde. ",
+        "how": "Como você está?",
+        "healthy": "Estou saudável",
+        "sick": "Estou doente",
+        "contract": "Você contraiu o Coronavírus e se recuperou?",
+        "contractNo": "Não",
+        "contractYesRecovered": "Sim e me recuperei",
+        "notSick": "Ótimo! Fique em casa mesmo não estando doente para evitar a propagação. ",
+        "symptoms": "Quais são os seus sintomas?",
+        "symptomFever": "Febre (acima de 38°C)",
+        "symptomCough": "Tosse (seca)",
+        "symptomVomit": "Vômito",
+        "symptomDyspnea": "Dificuldade respiratória",
+        "symptomWeakness": "Fraqueza",
+        "symptomHeadache": "Dor de cabeça",
+        "symptomCold": "Frio",
+        "symptomDiarrhoea": "Diarreia",
+        "symptomTasteSmell": "Transtornos do paladar / olfato ",
+        "symptomOthers": "Outros",
+        "diagnostic": "Qual é o diagnóstico?",
+        "contracted": "Em relação aos seus contatos sociais recentes, você pensa que contraiu o Coronavírus?",
+        "contractedNo": "Não",
+        "contractedProbably": "Provavelmente",
+        "contractedOfficial": "É oficial",
+        "contractedOfficialConfirm": "Confirme por favor",
+        "contractedOfficialConfirmText": "Você foi oficialmente testado(a) positivo para o Coronavírus por uma instituição médica reconhecida?",
+        "locationQuestion": "Onde você mora?",
+        "locationPlaceholder": "Código postal",
+        "locationValidError": "Por favor introduza um código postal suíço válido",
+        "send": "Enviar",
+        "error": "Erro",
+        "errorDetails": "Ocorreu um erro enquanto os seus dados foram enviados",
+        "errorClose": "Fechar",
+        "sentThanks": "Obrigado",
+        "sentComeBack": "Agradecemos a sua contribuição. Por favor volte caso o seu estado de saúde mude.",
+        "sentSomeoneElse": "Caso você queira avaliar outra pessoa, por favor, use outro celular, tablet ou computador.",
+        "sentMistake": "Você cometeu um erro ? Você pode fazer uma correção :",
+        "sentMistakeClickHere": "clique aqui"
+    },
+    "visualize": {
+        "title": "Visualizar",
+        "dataWarning": "Os dados seguintes foram recolhidos comunitariamente e não foram verificados. ",
+        "lastUpdate": "Última atualização:",
+        "layerHealthy": "Saudável",
+        "layerSickNoCovid": "Outras doenças",
+        "layerSickCovid": "Covid-19 (provável)",
+        "layerSickCovidConfirmed": "Covid-19 (testados/as)",
+        "layerRecovered": "Recuperados/as",
+        "layerRecoveredConfirmed": "Recuperados/as (testados/as)"
+    },
+    "about": {
+        "title": "Sobre",
+        "headWho": "Somos uma equipe de programadores suíços",
+        "who": "que quer ajudar a avaliar a atual situação da pandemia do COVID-19 no nosso país.",
+        "headNeedYou": "Precisamos de ti!",
+        "needYou": "A nossa aplicação é baseada na sua autoavaliação...então é importante que todos vocês venham atualizar o seu estado de saúde caso ele mude. ",
+        "headData": "Não armazenamos nenhum dado pessoal nos nossos servidores!",
+        "data": "Todos os dados são anônimos mas para poder manter a coerência da nossa base de dados, precisamos que você sempre use o mesmo navegador para atualizar seu status (caso contrário, você será contado duas vezes). ",
+        "headDataUpdate": "Em tempo real, hum...não!",
+        "dataUpdate": "Em tempo real, hum...não! Forneceremos atualizações dos números e dados com a maior frequência possível. Porém, você vai ter que esperar um pouco, especialmente na fase de lançamento do aplicativo. ",
+        "headPublicData": "Para outros programadores, ",
+        "publicData": "A nossa base de dados é pública e partilhada no Github . Por favor, use-a para criar uma incrivel visualização sua. ",
+        "headDataCare": "Aliás,",
+        "dataCare": "tenha em conta que a nossa base de dados é baseada em autoavaliações de pessoas, consequentemente os dados não são oficiais e poderão conter alguns erros. Os dados devem apenas ser usados como indicadores. ",
+        "headImprovement": "Se tiver alguma sugestão",
+        "improvement": "para melhorar o aplicativo ou caso você queira relatar um erro, por favor, entre em contato conosco no Facebook. "
+    },
+    "faq": {
+        "title": "PF (perguntas frequentes)"
+    }
+}

@@ -1,14 +1,15 @@
 {
-  "app": {
-    "title": "Self report",
-    "footer": {
-      "support": "Thank you for supporting us!",
-      "contact": "Let's get in touch on any of these platforms.",
-      "whatsappshare": "Report your health status to help fighting against the Covid-19!"
+    "app": {
+        "language":"English",
+        "title": "Self report",
+        "footer": {
+            "support": "Thank you for supporting us!",
+            "contact": "Let's get in touch on any of these platforms.",
+            "whatsappshare": "Report your health status to help fighting against the Covid-19!"
+        },
+        "yes": "Yes",
+        "no": "No"
     },
-    "yes": "Yes",
-    "no": "No"
-  },
   "renewReport": {
     "comingBack": "Thanks for coming back",
     "daysSince": "It has been {days} days since your last report.",
