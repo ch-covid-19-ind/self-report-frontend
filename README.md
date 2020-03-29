@@ -9,3 +9,10 @@ This project is based on Vue and vue-cli, using [Argon design template from Crea
 2. Create a `.env.local` file based on the `.env.example` file and fill it with your configuration
 3. If not already, configure a backend with firebase using the [self-report-backend project](https://github.com/ch-covid-19/self-report-backend)
 4. Run `npm run serve` to test locally and `npm run build` to build application
+
+
+### Notes on settng up NPM on Ubuntu ###
+1. `sudo apt-get install npm`
+2. `npm install -g @vue/cli` # might need sudo rights
+3. `npm install`
+4. `npm run serve`

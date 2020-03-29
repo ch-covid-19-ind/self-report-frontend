@@ -270,7 +270,7 @@
 
         _map = L.map('leaflet-map', {
           preferCanvas: true,
-        }).setView([46.7, 8.2], 8);
+        }).setView([22,78], 5);
 
         _tileLayers.push(L.tileLayer(this.mapBaseLayerUrl, {
           attribution: `&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors`,
