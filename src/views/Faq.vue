@@ -28,6 +28,9 @@
             <h3 class="text-white">{{ $t(`faq.othersQuestion4`, {disease: 'Covid-19'}) }}</h3>
             <p>{{ $t(`faq.othersResponse4`, {disease: 'Covid-19'}) }}</p>
 
+            <h3 class="text-white">{{ $t(`faq.othersQuestion5`, {disease: 'Covid-19'}) }}</h3>
+            <p>{{ $t(`faq.othersResponse5`, {disease: 'Covid-19'}) }}</p>
+
           </div>
         </div>
       </section>
