@@ -90,7 +90,14 @@
     "title": "FAQ",
     "goalQuestion": "What is the goal of this app?",
     "goalResponse": "We aim to provide a visualization of the progression of the {disease} pandemic in our country. How can we 'flatten the curve' without having a statistical idea of the current situation? Help us by publishing your health status.",
-    "othersQuestion": "How do I report other members of my family?",
-    "othersResponse": "We are working on this issue. For now, you can use a different devices (phones, tablet, computer) for each member of your family."
+    "othersQuestion1": "How do I report other members of my family?",
+    "othersResponse1": "We are working on this issue. For now, you can use a different devices (phones, tablet, computer) for each member of your family.",
+    "othersQuestion2": "Is this data official data confirmed by Govt. of India?",
+    "othersResponse2": "No, this is not official data confirmed by the Govt. For offical data please check: www.mohfw.gov.in. Another open source effort for collecting officially confirmed cases is: https://www.covid19india.org",
+    "othersQuestion3": "How can I contribute to your work?",
+    "othersResponse3": "You are welcome to join our commuinity effort in github organization: https://github.com/ch-covid-19-ind",
+    "othersQuestion4": "Can I donate some money to run the infrastructure costs?",
+    "othersResponse4": "You are welcome. We expect the traffic to grow. Currently, we are using the free credits given by Google Cloud. We need your support. You can contact us via the following email: prabhakaran1989@gmail.com to contribute to India hosting"
+
   }
 }

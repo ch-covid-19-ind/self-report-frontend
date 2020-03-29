@@ -16,8 +16,17 @@
             <h3 class="text-white">{{ $t(`faq.goalQuestion`, {disease: 'Covid-19'}) }}</h3>
             <p>{{ $t(`faq.goalResponse`, {disease: 'Covid-19'}) }}</p>
 
-            <h3 class="text-white">{{ $t(`faq.othersQuestion`, {disease: 'Covid-19'}) }}</h3>
-            <p>{{ $t(`faq.othersResponse`, {disease: 'Covid-19'}) }}</p>
+            <h3 class="text-white">{{ $t(`faq.othersQuestion1`, {disease: 'Covid-19'}) }}</h3>
+            <p>{{ $t(`faq.othersResponse1`, {disease: 'Covid-19'}) }}</p>
+
+            <h3 class="text-white">{{ $t(`faq.othersQuestion2`, {disease: 'Covid-19'}) }}</h3>
+            <p>{{ $t(`faq.othersResponse2`, {disease: 'Covid-19'}) }}</p>
+
+            <h3 class="text-white">{{ $t(`faq.othersQuestion3`, {disease: 'Covid-19'}) }}</h3>
+            <p>{{ $t(`faq.othersResponse3`, {disease: 'Covid-19'}) }}</p>
+
+            <h3 class="text-white">{{ $t(`faq.othersQuestion4`, {disease: 'Covid-19'}) }}</h3>
+            <p>{{ $t(`faq.othersResponse4`, {disease: 'Covid-19'}) }}</p>
 
           </div>
         </div>
