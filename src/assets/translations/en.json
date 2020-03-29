@@ -47,7 +47,7 @@
     "contractedOfficialConfirmText": "Have you been officially tested positive to {disease} by a recognized medical institution?",
     "locationQuestion": "Where do you live?",
     "locationPlaceholder": "Postal code",
-    "locationValidError": "Please enter a valid Swiss postal number",
+    "locationValidError": "Please enter a valid Indian postal number",
     "send": "Send",
     "error": "Error",
     "errorDetails": "An error occurred when sending your data",
@@ -71,7 +71,7 @@
   },
   "about": {
     "title": "About",
-    "headWho": "We are a team of swiss developers",
+    "headWho": "We are a team of swiss developers - helped by an Intenational team to bring this to India",
     "who": "that want to help to evaluate the current situation of the COVID-19 pandemia in our country.",
     "headNeedYou": "We need you!",
     "needYou": "Our app is based on your self-reporting...so that important that all of you come to update your health status in case of change.",
