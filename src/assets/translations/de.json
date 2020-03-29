@@ -12,7 +12,7 @@
   },
   "report": {
     "title": "Befund",
-    "intro": "Helfen Sie bei der Bekämpfung des neuen Coronavirus in der Schweiz, indem Sie Ihren Gesundheitszustand selbst melden.",
+    "intro": "Helfen Sie bei der Bekämpfung des neuen Coronavirus in der Indien, indem Sie Ihren Gesundheitszustand selbst melden.",
     "how": "Wie geht es Ihnen?",
     "healthy": "Ich bin gesund",
     "sick": "Ich bin krank",
@@ -58,7 +58,7 @@
   },
   "about": {
     "title": "Ueber uns",
-    "headWho": "Wir sind ein Team von Schweizer Entwicklern",
+    "headWho": "Wir sind ein Team von Schweizer Entwicklern mit volunteers",
     "who": ", die helfen wollen, die aktuelle Situation der COVID-19-Pandemie in unserem Land zu bewerten.",
     "headNeedYou": "Wir brauchen Sie!",
     "needYou": "Unsere App basiert auf Ihre Selbstmeldung ... es ist wichtig, dass Sie alle zurückkommen, um Ihren Gesundheitszustand im Falle einer Änderung zu aktualisieren.",
