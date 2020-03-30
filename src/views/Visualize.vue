@@ -112,7 +112,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.2,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'sick_guess_no_corona',
@@ -122,7 +122,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.1,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'sick_guess_corona',
@@ -152,7 +152,7 @@
             color: 'green',
             buttonColor: 'success',
             opacity: 0.3,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'recovered_confirmed',
@@ -162,7 +162,7 @@
             color: 'green',
             buttonColor: 'success',
             opacity: 0.3,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
         ],
       };
@@ -233,7 +233,7 @@
                 }
 
                 if (location.longitude && location.latitude) {
-                  location.coordinates = [+location.longitude, +location.latitude];
+                  location.coordinates = [+location.latitude, +location.longitude];
                 } else {
                   continue;
                 }
