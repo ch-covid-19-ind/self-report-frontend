@@ -243,10 +243,10 @@
 
                   location.regions = [];
                   location.places = [];
-                  for (const [i, region] of regions) {
+                  for (const [i, region] of regions.entries()) {
 
                     if (i === regions.length - 1) {
-                      location.places = location.regions[location.regions.length - 1].split('||');
+                      location.places = region.split('||');
                     } else {
                       location.regions.push(region);
                     }
@@ -385,8 +385,29 @@
             continue;
           }
 
-          let popup = `
-            <h4>${entry.postal_code} ${geocoding.places ? geocoding.places.join(', ') : ''}</h4>
+          let popup = ``;
+          const places = geocoding.places.filter(p => isNaN(p));
+          switch (places.length) {
+            case 0:
+              popup += `<h4>${entry.postal_code}</h4>`;
+              break;
+
+            case 1:
+              popup += `<h4>${entry.postal_code} ${places[0]}</h4>`;
+              break;
+
+            default:
+              popup += `<h4>${entry.postal_code}</h4>`;
+              popup += `<ul>`;
+              for (const place of places) {
+                popup += `<li><b>${place}</b></li>`;
+              }
+              popup += `</li>`;
+              break;
+          }
+
+          popup += `
+            <p></p>
             <table class="data">`;
 
           for (const layerDefinition of this.layersDefinifion) {

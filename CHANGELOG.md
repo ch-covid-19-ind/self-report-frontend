@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1] 2020-03-30
+
+### Fixed
+
+- Map locations display
+
 ## [1.0.0] 2020-03-30
 
 ### Changed
