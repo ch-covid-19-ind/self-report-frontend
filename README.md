@@ -73,10 +73,16 @@ The frontend uses vue-cli. Please refer to the [official documentation](https://
 7. Configure the URL for the backend endpoint to your backend instance.
 
 ### Notes on settng up NPM on Ubuntu ###
+0. Download latest https://nodejs.org/en/download/ and set it to your path (e.g., ~/.bashrc) in ubuntu.
+   - `NODEPATH=/home/pksec/software/node-v12.16.1-linux-x64/bin`
+   - `PATH="$NODEPATH:$PATH:"`
 1. `sudo apt-get install npm`
 2. `npm install -g @vue/cli` # might need sudo rights
 3. `npm install`
 4. `npm run serve`
+
+If you have installed with old node version. Frontend v1.0.1 will not compile in your machine. Update your node as described above and run:
+`npm rebuild`
 
 ## Develop
 

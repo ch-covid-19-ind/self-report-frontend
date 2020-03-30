@@ -327,27 +327,7 @@
         return Math.round(Math.abs((this.reportData.lastReport - new Date()) / (24 * 60 * 60 * 1000)));
       },
     },
-    // TODO: import this to us eth geo code
     methods: {
-      loadGeocode: function (url) {
-        return new Promise(function (resolve, reject) {
-          Papa.parse(url, {
-            download: true,
-            header: true,
-            error: (err, file, inputElem, reason) => reject(`Could not get geo-coding data<br>${err}`),
-            complete: (content, file) => {
-
-              const geocoding = {};
-              for (const location of content.data) {
-                location.coordinates = [+location.latitude, +location.longitude];
-                geocoding[location.npa_plz] = location;
-              }
-
-              resolve(geocoding)
-            },
-          });
-        });
-      },
 
       send: async function (event) {
 
