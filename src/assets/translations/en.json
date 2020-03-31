@@ -81,7 +81,7 @@
     "headDataUpdate": "Is this data updated Realtime, well...no!",
     "dataUpdate": "Currently, it is not supported. If we get enough support, we will bring this feature to you. We will provide update of the numbers as frequently as we can.",
     "headPublicData": "Want to use our data or join us?",
-    "publicData": "Our dataset is public and open in our github organization https://github.com/ch-covid-19-ind. Please use it to make your own awesome visualization.",
+    "publicData": "Our dataset is public and open in our github organization https://github.com/ch-covid-19/datasets-ind. Please use it to make your own awesome visualization.",
     "headDataCare": "Disclaimer!",
     "dataCare": "Keep in mind that our dataset is based on self-reporting from peoples thus the data are not official and could contains errors. The data is only intended to be used as an indicator.",
     "headImprovement": "If you have any suggestion",
@@ -92,15 +92,16 @@
     "goalQuestion": "What is the goal of this app?",
     "goalResponse": "We aim to provide a visualization of the progression of the {disease} pandemic in our country. How can we 'flatten the curve' without having a statistical idea of the current situation? Help us by publishing your health status.",
     "othersQuestion1": "How do I report other members of my family?",
-    "othersResponse1": "We are working on this issue. For now, you can use a different devices (phones, tablet, computer) for each member of your family.",
-    "othersQuestion2": "Do you store my any personal data of mine e.g., phone number, name, house address?",
-    "othersResponse2": "No, we do not store any personal data. As this is developed for Switzerland which follows high privacy standards no personal data is collected. Do not worry! We use cookies to identify the browser which stays in your browser.",
+    "othersResponse1": "We are working on this issue. For now, you can use a different device (e.g., phone, tablet, computer) or a different browser (e.g., chrome, firefox, opera, safari) for each member of your family. Please do not use incognito function as you cannot recover the session later to update your health status.",
+    "othersQuestion2": "Do you store any personal data of mine e.g., phone number, name, house address?",
+    "othersResponse2": "No, we do not store any personal data. As this is developed for Switzerland which follows high privacy standards no personal data is collected. We use browser cookies to identify your session.",
     "othersQuestion3": "Is this data official data confirmed by Govt. of India?",
-    "othersResponse3": "No, this is not official data confirmed by the Govt. For offical data please check: www.mohfw.gov.in. Another open source effort for collecting officially confirmed cases is: https://www.covid19india.org",
+    "othersResponse3": "No, this is not official data confirmed by the Govt. For official data please check: www.mohfw.gov.in. Another open source effort for collecting officially confirmed cases is: https://www.covid19india.org",
     "othersQuestion4": "How can I contribute to your work?",
-    "othersResponse4": "You are welcome to join our commuinity effort in github organization: https://github.com/ch-covid-19-ind",
+    "othersResponse4": "You are welcome to join our community effort in github organization: https://github.com/ch-covid-19/welcome. Currently, we are desperately looking for volunteers who can bring this platform to the people e.g., social media manager, media contact persons, etc. You do not need coding knowledge to help us. You could help just by contacting right people, replying to comments in Twitter and Facebook. We are Looking forward having many volunteers",
     "othersQuestion5": "Can I donate some money to run the infrastructure costs?",
-    "othersResponse5": "You are welcome. We expect the traffic to grow. Currently, we are using the free credits given by Google Cloud. We need your support. You can contact us via the following email: prabhakaran1989@gmail.com to contribute to India hosting"
-
+    "othersResponse5": "You are welcome. We expect the traffic to grow. Currently, we are using the free credits given by Google Cloud. We need your support. You can contact us via the following email: prabhakaran1989@gmail.com to contribute to India hosting",
+    "othersQuestion6": "How about the security of the website, can someone write a script to add invalid data?",
+    "othersResponse6": "That is a great question. We have taken necessary security precautions such as the following: We used industry standard Google Capcha v3 verification monitor suspicious behaviour and to prevent from such attacks. We also believe that hackers are also humans and therefore will not ethically involve in such actions."
   }
 }

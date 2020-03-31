@@ -84,6 +84,11 @@ The frontend uses vue-cli. Please refer to the [official documentation](https://
 If you have installed with old node version. Frontend v1.0.1 will not compile in your machine. Update your node as described above and run:
 `npm rebuild`
 
+#### Fix 
+https://stackoverflow.com/questions/49008498/npm-run-serve-error
+
+``echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p``
+
 ## Develop
 
 
