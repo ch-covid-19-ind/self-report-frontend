@@ -1,5 +1,7 @@
 # COVID Self report
 
+![CI](https://github.com/ch-covid-19/self-report-frontend/workflows/CI/badge.svg)
+
 This repository hosts the frontend code of the covid-self-report project.
 
 This project is based on [Vue.js](https://github.com/vuejs/) and vue-cli, using [Argon design template from Creative Tim](https://www.creative-tim.com/product/argon-design-system).
@@ -58,12 +60,15 @@ The frontend uses vue-cli. Please refer to the [official documentation](https://
 
 ### Setup
 
+Please be sure to use 'yarn' instead of 'npm' as package manager.
+
   1. Clone this repository
   2. Create a `.env` file based on the `.env.example` file and fill it with your configuration. See below to learn more about the configuration.
-  4. Run `npm run serve` to test locally and `npm run build` to build application
+  4. Run `yarn serve` to test locally and `yarn build` to build application
 
 #### Configuration
 
+1. Choose you location selector (default: postal-code) (only postal code available for now)
 1. Setup the data source and geocoding data URLs
 2. Set the map default position and zoom level
 3. Set the recaptcha key (not the secret) with the value from the reCAPTCHA console.

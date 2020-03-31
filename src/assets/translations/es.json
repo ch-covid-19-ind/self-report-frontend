@@ -1,6 +1,5 @@
 {
     "app": {
-        "language":"Español",
         "title": "Me reporto",
         "footer": {
             "support": "Gracias por apoyarnos!",
@@ -8,7 +7,8 @@
             "whatsappshare": "Reporta tu estado de salud para ayudar a luchar contra el Covid-19!"
         },
         "yes": "Si",
-        "no": "No"
+        "no": "No",
+        "language": "Español"
     },
     "renewReport": {
         "comingBack": "Gracias por regresar.",
@@ -20,14 +20,14 @@
     },
     "report": {
         "title": "Reporte",
-        "intro": "Ayuda a luchar contra el nuevo coronavirus en {country}, reportando tu estado de salud.",
-        "how": "Cómo va tu salud?",
-        "healthy": "Me siento bien",
-        "sick": "Me siento mal",
-        "contract": "Has contraído {disease} y te has recuperado",
+        "intro": "Ayuda a luchar contra el nuevo coronavirus en México reportando tu estado de salud.",
+        "how": "Cómo te sientes?",
+        "healthy": "Bien",
+        "sick": "Enfermo",
+        "contract": "Has contraído Covid-19 y te has recuperado",
         "contractNo": "No",
         "contractYesRecovered": "Si y me he recuperado",
-        "notSick": "Súper! Quédate en casa aunque no estés enfermo para evitar diseminar el virus",
+        "notSick": "Muy bien! Quédate en casa aunque no estés enfermo para evitar diseminar el virus",
         "symptoms": "¿Cuales son tus síntomas?",
         "symptomFever": "Fiebre (de mas de 38˚C)",
         "symptomCough": "Tos (seca)",
@@ -40,12 +40,12 @@
         "symptomTasteSmell": "Pérdida del gusto / olfato",
         "symptomOthers": "Otros",
         "diagnostic": "¿Cuál es el diagnóstico?",
-        "contracted": "Tomando en cuenta tus contactos sociales recientes, ¿crees que hayas contraído {disease}?",
+        "contracted": "Tomando en cuenta tus contactos sociales recientes, ¿crees que hayas contraído Covid-19?",
         "contractedNo": "No",
         "contractedProbably": "Probablemente",
-        "contractedOfficial": "Es oficial",
+        "contractedOfficial": "Si y es oficial",
         "contractedOfficialConfirm": "Confirma por favor",
-        "contractedOfficialConfirmText": "¿Has dado positivo oficialmente a {disease} por una institución médica reconocida?",
+        "contractedOfficialConfirmText": "¿Has dado positivo oficialmente a Covid-19 por una institución médica reconocida?",
         "locationQuestion": "¿Dónde vives?",
         "locationPlaceholder": "Código postal",
         "locationValidError": "Por favor, introduce un código postal válido",
@@ -71,17 +71,17 @@
         "layerRecoveredConfirmed": "Recuperado (comprobado)"
     },
     "about": {
-        "title": "Acerca de",
+        "title": "Acerca de nosotros",
         "headWho": "Somos un equipo internacional de programadores",
         "who": "que quieren ayudar a evaluar la situación actual de la pandemia COVID-19 en varios países.",
         "headNeedYou": "¡Te necesitamos!",
         "needYou": "Nuestra aplicación se basa en tu reporte ... así que es importante que actualices tu estado de salud en caso de que cambie.",
         "headData": "¡No guardamos ninguna información personal en nuestros servidores!",
         "data": "Todos los datos son anónimos, pero para mantener nuestra base de datos en forma, necesitamos que uses siempre el mismo navegador para actualizar tu estado (de lo contrario, contarás dos veces).",
-        "headDataUpdate": "En tiempo real, bueno ... ¡no!",
-        "dataUpdate": "En tiempo real, bueno ... ¡no! Proporcionaremos actualizaciones de los números con la mayor frecuencia posible. Pero deberás esperar un poco, especialmente durante la fase inicial del proyecto.",
+        "headDataUpdate": "En tiempo real, bueno ... ¡todavía no!",
+        "dataUpdate": "Haremos actualizaciones de los datos con la mayor frecuencia posible. Pero deberás esperar un poco, especialmente durante la fase inicial del proyecto.",
         "headPublicData": "Para otros programadores,",
-        "publicData": "nuestra base de datos está abierta al público en nuestro github. Úsala para hacer tu propia super visualización.",
+        "publicData": "nuestra base de datos está abierta al público en nuestro github. Úsala para hacer tu propia super visualización, o únete a nuestro esfuerzo de abrir otros países",
         "headDataCare": "Por cierto,",
         "dataCare": " toma en cuenta que nuestra base de datos depende de los reportes de la comunidad, por lo tanto, los datos no son oficiales y pueden contener errores. Los datos sólo están destinados a ser utilizados como un indicador.",
         "headImprovement": "Si tienes alguna sugerencia",

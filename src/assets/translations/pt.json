@@ -1,6 +1,5 @@
 {
     "app": {
-        "language":"Português",
         "title": "Autoavaliação",
         "footer": {
             "support": "Agradecemos o seu apoio!",
@@ -8,7 +7,8 @@
             "whatsappshare": "Informe sobre o seu estado de saúde para ajudar a combater o Covid-19!"
         },
         "yes": "Sim",
-        "no": "Não"
+        "no": "Não",
+        "language": "Português"
     },
     "renewReport": {
         "comingBack": "Obrigado por ter voltado",

@@ -1,14 +1,14 @@
 {
     "app": {
-        "language":"Italiano",
         "title": "Self report",
         "footer": {
-            "support": "La ringraziamo per il suo sopporto!",
+            "support": "Ti ringraziamo per il tuo supporto!",
             "contact": "Contattaci su una di queste piattaforme.",
             "whatsappshare": "Aggiornaci sul tuo stato di salute per contribuire alla lotta contro il Covid-19!"
         },
         "yes": "Si",
-        "no": "No"
+        "no": "No",
+        "language": "Inglese"
     },
     "renewReport": {
         "comingBack": "Grazie per essere tornato",
@@ -24,7 +24,7 @@
         "how": "Come ti senti?",
         "healthy": "Sono in salute",
         "sick": "Sono malato",
-        "contract": "Hai contratto il {disease} e sei guarito/a?",
+        "contract": "Hai contratto il Covid-19 e sei guarito/a?",
         "contractNo": "No",
         "contractYesRecovered": "Si, e sono guarito/a",
         "notSick": "Grandioso! Rimani a casa in ogni caso, eviteremo così la propagazione!",
@@ -40,12 +40,12 @@
         "symptomTasteSmell": "Gusto o olfatto indeboliti",
         "symptomOthers": "Altri",
         "diagnostic": "Qual è la tua diagnosi?",
-        "contracted": "Considerando i tuoi ultimi contatti sociali, credi di aver contratto il {disease}?",
+        "contracted": "Considerando i tuoi ultimi contatti sociali, credi di aver contratto il Covid-19?",
         "contractedNo": "No",
         "contractedProbably": "Probabilmente",
         "contractedOfficial": "È ufficiale",
         "contractedOfficialConfirm": "Conferma",
-        "contractedOfficialConfirmText": "Sei risultato positivo al {disease} da un Istituto Medico riconosciuto?",
+        "contractedOfficialConfirmText": "Sei risultato positivo al Covid-19 da un Istituto Medico riconosciuto?",
         "locationQuestion": "Dove abiti?",
         "locationPlaceholder": "codice postale",
         "locationValidError": "Inserire un codice postale svizzero valido",

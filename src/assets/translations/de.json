@@ -1,6 +1,5 @@
 {
     "app": {
-        "language":"Deutsch",
         "title": "Self report",
         "footer": {
             "support": "Vielen Dank für Ihre Mitarbeit!",
@@ -8,11 +7,12 @@
             "whatsappshare": "Berichten Sie über Ihren Gesundheitszustand, um den Kampf gegen den Covid-19 zu unterstützen!"
         },
         "yes": "Ja",
-        "no": "Nein"
+        "no": "Nein",
+        "language": "Deutsch"
     },
     "renewReport": {
         "comingBack": "Danke, dass Sie zurückgekommen sind",
-        "daysSince": "Es sind {Tage} seit Ihrem letzten Bericht vergangen",
+        "daysSince": "Es sind {days} seit Ihrem letzten Bericht vergangen",
         "explainOther": " Wenn Sie sich für eine andere Person melden wollen, benutzen Sie bitte ein anderes Telefon, ein Tablett oder einen anderen Computer.",
         "click": " Klicken Sie",
         "here": "hier",

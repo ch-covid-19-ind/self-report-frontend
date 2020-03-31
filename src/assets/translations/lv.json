@@ -1,6 +1,5 @@
 {
     "app": {
-        "language":"Latviešu valoda",
         "title": "Pašziņojums",
         "footer": {
             "support": "Paldies, ka atbalstījāt mūs!",
@@ -8,11 +7,12 @@
             "whatsappshare": "Paziņojiet par savu veselības stāvokli, lai palīdzētu cīņā pret Covid-19!"
         },
         "yes": "Jā",
-        "no": "Nē"
+        "no": "Nē",
+        "language": "Latviešu valoda"
     },
     "renewReport": {
         "comingBack": "Paldies, ka atgriezāties",
-        "daysSince": "Ir pagājušas {dienas} dienas kopš jūsu pēdējā ziņojuma.",
+        "daysSince": "Ir pagājušas {days} dienas kopš jūsu pēdējā ziņojuma.",
         "explainOther": "Ja vēlaties ziņot par kādu citu, lūdzu, izmantojiet citu tālruni, planšetdatoru vai datoru.",
         "click": "Klikšķis",
         "here": "šeit",
@@ -39,11 +39,11 @@
         "symptomDiarrhoea": "Caureja",
         "symptomTasteSmell": "Garšas / ožas traucējumi",
         "symptomOthers": "Citi",
-        "diagnostic": "Kas ir diagnostika?\n",
+        "diagnostic": "Kāda ir diagnoze?\n",
         "contracted": "Kas attiecas uz jūsu nesenajiem sociālajiem kontaktiem, vai jūs domājat, ka esat saslimis?",
         "contractedNo": "Nē",
         "contractedProbably": "Droši vien",
-        "contractedOfficial": "Tas ir oficiāli",
+        "contractedOfficial": "Oficiāli apstiprināts",
         "contractedOfficialConfirm": "Lūdzu apstipriniet",
         "contractedOfficialConfirmText": "Vai atzītā ārstniecības iestāde ir oficiāli pārbaudījusi un apstiprinājusi, ka jums ir slimība?",
         "locationQuestion": "Kur jūs dzīvojat?",
@@ -71,12 +71,12 @@
         "layerRecoveredConfirmed": "Izveseļojies (pārbaudīts)"
     },
     "about": {
-        "title": "Par",
+        "title": "Par mums",
         "headWho": "Mēs esam Šveices izstrādātāju komanda",
         "who": "kas vēlas palīdzēt novērtēt COVID-19 pandēmijas pašreizējo situāciju mūsu valstī.",
         "headNeedYou": "Jūs esat mums vajadzīgs!",
-        "needYou": "Mūsu lietotne ir balstīta uz jūsu pašziņošanu ... ..tāpēc ir svarīgi, lai jūs visi pārmaiņu gadījumā atjauninātu savu veselības stāvokli.",
-        "headData": "Mēs nesaglabājam personīgo informāciju savos serveros!",
+        "needYou": "Mūsu lietotne ir balstīta uz jūsu pašziņošanu ... tāpēc ir svarīgi, lai jūs atjauninātu datus sava veselības stāvokļa pārmaiņu gadījumā.",
+        "headData": "Mēs neglabājam personīgo informāciju savos serveros!",
         "data": "Visi dati ir anonīmi, taču, lai saglabātu mūsu datu kopas konsekventi, mums ir nepieciešams, ka jūs izmantojat vienmēr vienu un to pašu pārlūkprogrammu sava statusa atjaunināšanai (pretējā gadījumā jūs būsiet skaitīts divreiz)",
         "headDataUpdate": "Reāllaiks, labi ... nē!",
         "dataUpdate": "Reāllaiks, labi ... nē! Mēs nodrošināsim datu atjaunināšan cik bieži vien iespējams. Bet jums būs nedaudz jāpagaida, jo īpaši lietotnes sākuma posmā.\n",

@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.1.2] 2020-03-31
+
+### Changed
+
+- Restore EN / FR FAQ translations
+
+## [1.1.1] 2020-03-31
+
+### Changed
+
+- Translations updated
+
+## [1.1.0] 2020-03-30
+
+### Added
+
+- Location selector is now customizable with VUE_APP_REPORT_LOCATION_SELECTOR (only postal code available tough)
+
 ## [1.0.1] 2020-03-30
 
 ### Fixed

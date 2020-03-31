@@ -164,19 +164,21 @@
             <div class="row mt-3" v-show="reportData.sick !== null">
               <div class="col-lg-6">
                 <h3 class="text-white">{{ $t('report.locationQuestion') }}</h3>
-                <base-input v-model="reportData.postalCode"
-                            type="number"
-                            :placeholder="$t('report.locationPlaceholder')"
-                            :error="postalCodeCheck && !validPostalCode ? $t('report.locationValidError') : ''"
-                            @focusout="postalCodeCheck = true"
-                            :valid="!postalCodeCheck ? null : validPostalCode"></base-input>
+
+                <location-from-address v-if="locationSelector === 'address'"
+                                       :location.sync="reportData.postalCode"
+                                       :valid.sync="validLocation"></location-from-address>
+
+                <location-from-postal-code v-else
+                                           :location.sync="reportData.postalCode"
+                                           :valid.sync="validLocation"></location-from-postal-code>
               </div>
             </div>
 
             <div class="row mt-3" v-show="reportData.sick !== null">
               <div class="col-lg-6">
                 <base-button @click="send"
-                             :disabled="!validPostalCode || reportData.diagnostic === null"
+                             :disabled="!validLocation || reportData.diagnostic === null"
                              class="mb-3 mb-sm-0"
                              type="white"
                              icon="fa fa-send">
@@ -244,10 +246,14 @@
 
   import Modal from '@/components/Modal.vue';
   import newGithubIssueUrl from 'new-github-issue-url';
+  import LocationFromPostalCode from "./LocationEditors/LocationFromPostalCode";
+  import LocationFromAddress from "./LocationEditors/LocationFromAddress";
 
   export default {
     name: "report",
     components: {
+      LocationFromAddress,
+      LocationFromPostalCode,
       Modal
     },
     async mounted() {
@@ -291,15 +297,17 @@
         healthyOfficialConfirmModal: false,
         sendErrorModal: false,
         sendError: '',
-        postalCodeCheck: false,
         forceReportAgain: false,
+
+        locationSelector: process.env.VUE_APP_REPORT_LOCATION_SELECTOR,
+        validLocation: false,
 
         reportData: {
           sessionId: null,
           sick: null,
           symptoms: [],
           diagnostic: null,
-          postalCode: '',
+          postalCode: null,
           lastReport: null,
         },
         sending: false,
@@ -417,7 +425,7 @@
       githubIssue: async function () {
         const url = newGithubIssueUrl({
           user: process.env.VUE_APP_GITHUB_REPO_OWNER,
-          repo:  process.env.VUE_APP_GITHUB_REPO_NAME,
+          repo: process.env.VUE_APP_GITHUB_REPO_NAME,
           title: 'Error when sending from the front-end',
           body: `The error is:\n> ${this.sendError}\n\n---\nAuto-generated from the front-end`
         });
