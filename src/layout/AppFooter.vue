@@ -31,6 +31,28 @@
           </a>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <p>Looking for another country?</p>
+        </div>
+        <div class="col-lg-6 justify-content-end">
+          <span v-for="country of countries" :key="country.code">
+            <span v-if="country.url !== activeCountry">
+              <span v-if="country.code !== countries[0].code">|</span>
+              <a :href="country.url" class="country">
+                <img :src="`https://www.countryflags.io/${country.code}/flat/64.png`"
+                     :alt="`${country.code} flag`"
+                     target="_blank"
+                     class="flag ml-1"/>
+                {{ $t(`app.footer.${country.code}`) }}
+              </a>
+            </span>
+          </span>
+        </div>
+      </div>
+
+
       <hr>
       <div class="row align-items-center justify-content-md-between">
         <div class="col-md-12">
@@ -52,18 +74,31 @@
 </template>
 
 <script>
+
+  const countries = require('@/assets/sites.json');
+
   export default {
     name: 'app-footer',
     data() {
       return {
         year: new Date().getFullYear(),
         version: process.env.VERSION,
+        countries: countries,
+        activeCountry: window.location.origin,
       }
     },
   };
 </script>
 
 <style scoped>
+
+  .flag {
+    height: 32px;
+  }
+
+  .country {
+    white-space: nowrap;
+  }
 
   .btn-whatsapp {
     -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);

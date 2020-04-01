@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.3.0] 2020-03-31
+
+### Added
+
+- Adding other countries sites
+
+### Fixed
+
+- Postal code validation on load
+
+## [1.2.0] 2020-03-31
+
+### Fixed
+
+- Do not show next page if send is not a success
+
+### Added
+
+- If no data is available for the current day, fallback to last date with data
+- If the user location is known, center the map on his position with extra zoom : see new VUE_APP_VISU_MAP_ZOOM_LEVEL_LOCAL
+
 ## [1.1.2] 2020-03-31
 
 ### Changed
