@@ -4,7 +4,10 @@
         "footer": {
             "support": "Thank you for supporting us!",
             "contact": "Let's get in touch on any of these platforms.",
-            "whatsappshare": "Report your health status to help fighting against the Covid-19!"
+            "whatsappshare": "Report your health status to help fighting against the Covid-19!",
+            "ch": "Switzerland",
+            "in": "India",
+            "me": "Mexico"
         },
         "yes": "Yes",
         "no": "No",
@@ -53,11 +56,13 @@
         "error": "Error",
         "errorDetails": "An error occurred when sending your data",
         "errorClose": "Close",
-        "sentThanks": "Thanks",
+        "sentThanks": "Data Recorded Successfully",
         "sentComeBack": "Thank you for your contribution. Please come back if your health status changes.",
         "sentSomeoneElse": "If you want to file a report for someone else, please use another phone, tablet or computer.",
         "sentMistake": "You've made a mistake ? You can correct it : ",
-        "sentMistakeClickHere": "click here"
+        "sentMistakeClickHere": "Click here: To update your health status",
+        "wantToSeePublicData": "Want to see the public health status data?",
+        "seePublicData": "Click here: to Visualize data in MAP"
     },
     "visualize": {
         "title": "Visualize",
@@ -100,8 +105,10 @@
       "othersQuestion4": "How can I contribute to your work?",
       "othersResponse4": "You are welcome to join our community effort in github organization: https://github.com/ch-covid-19/welcome. Currently, we are desperately looking for volunteers who can bring this platform to the people e.g., social media manager, media contact persons, etc. You do not need coding knowledge to help us. You could help just by contacting right people, replying to comments in Twitter and Facebook. We are Looking forward having many volunteers",
       "othersQuestion5": "Can I donate some money to run the infrastructure costs?",
-      "othersResponse5": "You are welcome. We expect the traffic to grow. Currently, we are using the free credits given by Google Cloud. We need your support. You can contact us via the following email: prabhakaran1989@gmail.com to contribute to India hosting",
+      "othersResponse5": "You are welcome. We expect the traffic to grow. Currently, we are using the free credits given by Google Cloud. We need your support. You can contact us via the following email: self.report.health.status@gmail.com to contribute to India hosting",
       "othersQuestion6": "How about the security of the website, can someone write a script to add invalid data?",
-      "othersResponse6": "That is a great question. We have taken necessary security precautions such as the following: We used industry standard Google Capcha v3 verification monitor suspicious behaviour and to prevent from such attacks. We also believe that hackers are also humans and therefore will not ethically involve in such actions."
+      "othersResponse6": "That is a great question. We have taken necessary security precautions such as the following: We used industry standard Google Capcha v3 verification monitor suspicious behaviour and to prevent from such attacks. We also believe that hackers are also humans and therefore will not ethically involve in such actions.",
+      "othersQuestion7": "Who are the developers and why are they doing it, of course there should be some financial motivation behind your application right?",
+      "othersResponse7": "Good question ! To know the developers involved visit our github page: https://github.com/orgs/ch-covid-19/people (some of them have not enabled public view, you cannot view them unless you join our team). Our team is growing everyday. We have translators, designers, and coders, so on. We are spending out time and effort on this web application without expecting anything in return. In some sense you could see our work as donation for covid-19 financial crisis. Most of us have full-time job and we are working in the evenings, weekends to bring this to you for your benefit. The data is publicly available. Therefore, our motive and goal is to provide transperant data to the people and the government unlike other websites which take data from you and do not publish the data."
     }
 }

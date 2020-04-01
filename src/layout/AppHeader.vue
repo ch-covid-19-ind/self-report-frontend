@@ -2,12 +2,12 @@
   <header class="header-global">
     <base-nav class="navbar-main" transparent type="" effect="light" expand>
       <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
-        <img src="img/brand/logo_alpha.png" alt="logo"> Self-report
+        <img src="img/brand/logo_alpha.png" alt="logo"> Self-report-india
       </router-link>
 
       <div class="row" slot="content-header" slot-scope="{closeMenu}">
         <div class="col-8 collapse-brand">
-          <img src="img/brand/logo_white_app.png" alt="logo"> Self-report
+          <img src="img/brand/logo_white_app.png" alt="logo"> Self-report-india
         </div>
         <div class="col-4 collapse-close">
           <close-button @click="closeMenu"></close-button>
