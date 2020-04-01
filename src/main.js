@@ -44,7 +44,7 @@ if (locale === null) {
 
 import VueI18n from 'vue-i18n';
 
-const configuredLanguages = ['ind'];
+const configuredLanguages = ['en'];
 
 configuredLanguages.push(...process.env.VUE_APP_ADDITIONAL_LANGUAGES.split(','));
 
