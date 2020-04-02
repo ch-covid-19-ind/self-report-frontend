@@ -25,7 +25,13 @@
 
         <li class="nav-item">
           <router-link class="nav-link" to="/visualize">
-            {{ $t('visualize.title') }}
+            <button type="button" class="btn btn-info btn-sm d-md-none d-lg-inline">
+              <i class="fa fa-map"></i> 
+              {{ $t('visualize.title') }}
+            </button>
+            <span class="d-md-inline d-lg-none">
+              {{ $t('visualize.title') }}
+            </span>
           </router-link>
         </li>
         <li class="nav-item">

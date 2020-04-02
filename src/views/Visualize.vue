@@ -4,11 +4,11 @@
     <div class="position-relative">
       <!-- shape Hero -->
       <section class="section-shaped my-0">
-        <div class="shape shape-style-1 shape-default shape-skew">
+        <div class="shape shape-style-2 shape-default shape-skew">
           <span></span>
           <span></span>
         </div>
-        <div class="container shape-container d-flex">
+        <div class="container shape-container d-flex" style="top: -5rem">
 
           <div class="col text-white">
 
@@ -97,7 +97,7 @@
         datePickerFormat: {
           allowInput: true,
           dateFormat: 'Y-m-d',
-          minDate: '2020-03-25',
+          minDate: '2020-03-30',
           maxDate: _today.toISOString(),
         },
 
@@ -116,7 +116,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.2,
-            defaultEnabled: true,
+            defaultEnabled: false,
           },
           {
             id: 'sick_guess_no_corona',
@@ -126,7 +126,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.1,
-            defaultEnabled: true,
+            defaultEnabled: false,
           },
           {
             id: 'sick_guess_corona',
@@ -136,13 +136,13 @@
             color: 'orangered',
             buttonColor: 'warning',
             opacity: 0.3,
-            defaultEnabled: true,
+            defaultEnabled: false,
           },
           {
             id: 'sick_corona_confirmed',
             label: 'visualize.layerSickCovidConfirmed',
             value: (entry) => entry.sick_corona_confirmed,
-            sizeRatio: 1,
+            sizeRatio: 2,
             color: 'red',
             buttonColor: 'danger',
             opacity: 0.3,
@@ -156,7 +156,7 @@
             color: 'green',
             buttonColor: 'success',
             opacity: 0.3,
-            defaultEnabled: true,
+            defaultEnabled: false,
           },
           {
             id: 'recovered_confirmed',
