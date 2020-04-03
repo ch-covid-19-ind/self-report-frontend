@@ -1,6 +1,16 @@
 # Changelog
 
-## [1.3.1] 2020-04-03
+
+## [1.3.2] 2020-04-03
+
+### Added
+
+- Visualize button appears in all pages at the top (Always Enabled)
+- Map data point errors fixed
+- Dropdown menu auto close fixed
+- Language Option removed
+
+## [1.3.1] 2020-04-02
 
 ### Added
 

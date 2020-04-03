@@ -8,7 +8,7 @@
           <span></span>
           <span></span>
         </div>
-        <div class="container shape-container d-flex" style="top: -5rem">
+        <div class="container shape-container d-flex" style="top: -6rem">
 
           <div class="col text-white">
 
@@ -17,7 +17,7 @@
               <p v-html="error"></p>
             </base-alert>
 
-            <h1 class="display-3 text-white">{{ $t('visualize.title') }}</h1>
+            <h1 class="display-4 text-white">{{ $t('visualize.title') }}</h1>
 
             <p>{{ $t('visualize.dataWarning') }}</p>
 

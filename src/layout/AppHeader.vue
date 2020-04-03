@@ -15,17 +15,16 @@
       </div>
 
 
-      <ul class="navbar-nav navbar-nav-hover align-items-lg-center">
-
-        <li class="nav-item">
+      <ul class="navbar-nav navbar-nav-hover align-items-lg-center" slot-scope="{closeMenu}">
+        <li class="nav-item" @click="closeMenu">
           <router-link class="nav-link" to="/">
             {{ $t('report.title') }}
           </router-link>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" @click="closeMenu">
           <router-link class="nav-link" to="/visualize">
-            <button type="button" class="btn btn-info btn-sm d-md-none d-lg-inline">
+            <button type="button" class="btn btn-info btn-sm d-sm-none d-none d-lg-inline">
               <i class="fa fa-map"></i> 
               {{ $t('visualize.title') }}
             </button>
@@ -34,22 +33,23 @@
             </span>
           </router-link>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" @click="closeMenu">
           <router-link class="nav-link" to="/faq">
             {{ $t('faq.title') }}
           </router-link>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item" @click="closeMenu">
           <router-link class="nav-link" to="/about">
             {{ $t('about.title') }}
           </router-link>
         </li>
+        
 
-      </ul>
+      <!-- </ul>
 
       <ul class="navbar-nav align-items-lg-center ml-lg-auto">
-
+      
         <base-dropdown tag="li" class="nav-item">
           <a slot="title" href="#" class="nav-link" data-toggle="dropdown" role="button">
             <i class="ni ni-bold-down"></i>
@@ -58,7 +58,8 @@
           <a v-for="language of languages" v-bind:key="language.id" href="" class="dropdown-item"
              @click.prevent="setLocale(language.id)">{{ language.label }}</a>
         </base-dropdown>
-
+      -->
+      
         <li v-if="socialLinkWhatsapp" class="nav-item">
           <a class="nav-link nav-link-icon"
              :href="`https://wa.me/?text=${$t('app.footer.whatsappshare')} ${socialLinkWhatsapp}`"
