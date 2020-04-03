@@ -473,13 +473,14 @@
               let markerSize = layerDefinition.value(entry) * layerDefinition.sizeRatio;
               // markerSize = markerSize / allLayersMax * this.maxBubbleSize;
               markerSize = markerSize / layerDefinition.data.max * this.maxBubbleSize;
-
-              layerDefinition.data.markers.push(L.circle(geocoding.coordinates, {
-                weight: 0,
-                fillColor: layerDefinition.color,
-                fillOpacity: layerDefinition.opacity,
-                radius: markerSize > 0 ? Math.max(markerSize, this.minBubbleSize) : 0,
-              }).bindPopup(popup));
+              if(markerSize > 0){
+                layerDefinition.data.markers.push(L.circle(geocoding.coordinates, {
+                  weight: 0,
+                  fillColor: layerDefinition.color,
+                  fillOpacity: layerDefinition.opacity,
+                  radius: markerSize > 0 ? Math.max(markerSize, this.minBubbleSize) : 0,
+                }).bindPopup(popup));
+              }
             } catch (error) {
               console.error(entry, error);
             }
