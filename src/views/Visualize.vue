@@ -116,7 +116,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.2,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'sick_guess_no_corona',
@@ -126,7 +126,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.1,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'sick_guess_corona',
@@ -136,7 +136,7 @@
             color: 'orangered',
             buttonColor: 'warning',
             opacity: 0.3,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'sick_corona_confirmed',
@@ -156,7 +156,7 @@
             color: 'green',
             buttonColor: 'success',
             opacity: 0.3,
-            defaultEnabled: false,
+            defaultEnabled: true,
           },
           {
             id: 'recovered_confirmed',
