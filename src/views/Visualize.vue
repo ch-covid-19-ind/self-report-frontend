@@ -97,7 +97,7 @@
         datePickerFormat: {
           allowInput: true,
           dateFormat: 'Y-m-d',
-          minDate: '2020-03-25',
+          minDate: '2020-03-30',
           maxDate: _today.toISOString(),
         },
 

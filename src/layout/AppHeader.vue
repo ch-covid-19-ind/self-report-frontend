@@ -1,6 +1,6 @@
 <template>
   <header class="header-global">
-    <base-nav class="navbar-main" ref="basenav" transparent type="" effect="light" expand>
+    <base-nav class="navbar-main" transparent type="" effect="light" expand>
       <router-link slot="brand" class="navbar-brand mr-lg-5" to="/">
         <img src="img/brand/logo_alpha.png" alt="logo"> Self-report-india
       </router-link>
@@ -31,7 +31,13 @@
 
         <li class="nav-item">
           <router-link class="nav-link" :to="{ name: 'visualize' }">
-            {{ $t('visualize.title') }}
+            <button type="button" class="btn btn-info btn-sm d-sm-none d-none d-lg-inline">
+              <i class="fa fa-map"></i> 
+              {{ $t('visualize.title') }}
+            </button>
+            <span class="d-md-inline d-lg-none">
+              {{ $t('visualize.title') }}
+            </span>
           </router-link>
         </li>
         <li class="nav-item">

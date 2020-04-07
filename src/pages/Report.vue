@@ -25,9 +25,14 @@
               </div>
             </div>
 
-            <div class="row mt-3">
-              <div class="col-lg-6">
-
+            <div class="row mt-0">
+              <div class="col-lg-9">
+                <a href="/visualize"> 
+                  <button type="button" class="btn btn-info btn-block  d-lg-none d-md-inline mb-4">
+                  <i class="fa fa-map"></i> 
+                  {{ $t('visualize.title') }}
+                  </button>
+                </a>
                 <p class="text-white">{{ $t('report.intro') }}</p>
 
                 <h1 class="display-3 text-white">{{ $t('report.how') }}</h1>
