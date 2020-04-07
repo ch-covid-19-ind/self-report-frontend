@@ -68,7 +68,7 @@ Please be sure to use 'yarn' instead of 'npm' as package manager.
 
 #### Configuration
 
-0. Choose you location selector type (e.g., address or postal-code) (default: postal-code) (only postal code method is available for now)
+1. Choose you location selector type (e.g., address or postal-code) (default: postal-code) (only postal code method is available for now)
    - e.g., configuration ``VUE_APP_REPORT_LOCATION_SELECTOR=postal-code``
 1. Setup the data source and geocoding data URLs
 2. Set the map default position and zoom level
@@ -96,7 +96,6 @@ https://stackoverflow.com/questions/49008498/npm-run-serve-error
 ``echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p``
 
 ## Develop
-
 
 If you want to develop on the front-end, you can set-up the configuration with existing data sources from an already running instance.
 

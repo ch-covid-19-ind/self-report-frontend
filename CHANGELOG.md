@@ -1,12 +1,37 @@
 # Changelog
 
-## [1.3.1] 2020-04-03
+## [1.5.0] 2020-04-05
+
+### Added
+
+- Add address selector
+
+## [1.4.1] 2020-04-05
+
+Changes by @pksec
 
 ### Added
 
 - Added VUE_APP_PINCODE_LENGTH_VALIDATION=<int> e.g., 6 for India; 4 for Swiss.
 - Improved Readme for ``VUE_APP_REPORT_LOCATION_SELECTOR=postal-code`
 - Added MAP view button immediately after submission page
+
+## [1.4.0] 2020-04-04
+
+### Added
+
+- New home page
+- Added global store to keep geocoding and reports data
+
+### Changed
+
+- The map is now a component
+- Markers size is now logarithmic 
+
+### Fixed
+
+- The menu now closes after an action
+- Mexico flag is now correct
 
 ## [1.3.0] 2020-03-31
 

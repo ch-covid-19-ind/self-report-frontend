@@ -3,7 +3,7 @@
 
     <div class="position-relative">
       <!-- shape Hero -->
-      <section class="section-shaped my-0">
+      <section class="section-hero section-shaped my-0">
         <div class="shape shape-style-1 shape-default shape-skew">
           <span></span>
           <span></span>
@@ -29,8 +29,6 @@
               <div class="col-lg-6">
 
                 <p class="text-white">{{ $t('report.intro') }}</p>
-
-                <p class="text-white">{{ $t(`faq.goalResponse`, {disease: 'Covid-19'}) }}</p>
 
                 <h1 class="display-3 text-white">{{ $t('report.how') }}</h1>
 
@@ -224,16 +222,15 @@
           </div>
 
           <div v-else class="text-white">
-            <h3 class="text-white"> {{ $t('report.wantToSeePublicData') }}
-              <router-link class="nav-link" to="/visualize">
-                <base-button size="sm" type="info">
-                  {{ $t('report.seePublicData') }}
-                </base-button>
-              </router-link>
-            </h3>
-            <br>
+
             <h3 class="text-white">{{ $t('report.sentThanks') }}</h3>
             <p>{{ $t('report.sentComeBack') }}</p>
+            <p>
+              {{ $t('report.wantToSeePublicData') }}
+              <base-button size="sm" @click="$router.replace({ name: 'visualize' })" type="info">
+                {{ $t('visualize.title') }}
+              </base-button>
+            </p>
             <p>{{ $t('report.sentSomeoneElse') }}</p>
             <p>
               {{ $t('report.sentMistake') }}
@@ -252,13 +249,13 @@
 <script>
   import {v4 as uuidv4} from 'uuid';
 
-  import Modal from '@/components/Modal.vue';
+  import Modal from '@/components/Modal';
   import newGithubIssueUrl from 'new-github-issue-url';
-  import LocationFromPostalCode from "./LocationEditors/LocationFromPostalCode";
-  import LocationFromAddress from "./LocationEditors/LocationFromAddress";
+  import LocationFromPostalCode from '../views/LocationEditors/LocationFromPostalCode';
+  import LocationFromAddress from '../views/LocationEditors/LocationFromAddress';
 
   export default {
-    name: "report",
+    name: 'report',
     components: {
       LocationFromAddress,
       LocationFromPostalCode,
