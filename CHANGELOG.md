@@ -1,7 +1,9 @@
 # Changelog
 
 ## [1.5.1] 2020-04-25
-- Visualize button appears in all pages at the top (Always Enabled)
+- Fixed Token Reference Missing in Capcha Code
+- New Nav link for Consortium
+- Fixed VUE_APP_REPORT_FORM_MEDICAL=false
 - Map data point errors fixed
 
 ## [1.5.0] 2020-04-05

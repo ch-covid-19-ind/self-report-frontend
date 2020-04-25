@@ -17,7 +17,7 @@
         "title": "Home",
         "introTitle": "Help to fight the Coronavirus",
         "introText": "We aim to provide a visualization of the progression of the Covid-19 pandemic in our country. To do so, we encourage people to report anonymously their own health status to contribute to an open database that is complementary to the official census",
-        "fullMap": "Full map"
+        "fullMap": "Visualize Full Map of India"
     },
     "renewReport": {
         "comingBack": "Thanks for coming back",
@@ -28,7 +28,7 @@
         "ifNotYou": "if it wasn't you."
     },
     "report": {
-        "title": "Report",
+        "title": "Report Health Status",
         "intro": "Help fighting against the new Coronavirus in India by self-reporting your health status.",
         "how": "How are you doing?",
         "healthy": "I'm healthy",
@@ -94,6 +94,7 @@
     },
     "about": {
       "title": "About",
+      "org": "Consortium",
       "headWho": "This project is developed by a team of Switzerland developers.",
       "who": "They open sourced it to the world to help other countries. Now, it is maintained by an intenational team to bring this to India. The aim is to deliver the community driven data collection to the public. This information provides the current situation of the COVID-19 pandemia in India.",
       "headNeedYou": "We need your support!",

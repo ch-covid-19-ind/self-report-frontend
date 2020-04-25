@@ -158,7 +158,7 @@
 
         locationSelector: process.env.VUE_APP_REPORT_LOCATION_SELECTOR,
         reportForm: process.env.VUE_APP_REPORT_FORM,
-        medicalFormEnabled: process.env.VUE_APP_REPORT_FORM_MEDICAL,
+        medicalFormEnabled: (process.env.VUE_APP_REPORT_FORM_MEDICAL === "true"),
         medicalForm: false,
         validLocation: false,
 
@@ -242,7 +242,7 @@
           try {
             const headers = new Headers();
             headers.append("Content-Type", "application/json");
-
+            const token = await this.$recaptcha('report');
             const response = await fetch(process.env.VUE_APP_API_ENDPOINT_REPORT, {
               method: 'POST',
               headers,

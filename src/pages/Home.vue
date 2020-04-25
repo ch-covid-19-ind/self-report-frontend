@@ -15,12 +15,6 @@
 
               <p class="text-white">{{ $t('home.introText') }}</p>
 
-              <base-alert type="warning">
-                <b>We are looking for help!</b> Covid self report in an Open Source project maintained by volunteers
-                from different countries.<br>You can join us to help : <a class="help-link"
-                                                                          href="https://github.com/ch-covid-19/welcome">click
-                here</a>.
-              </base-alert>
 
               <base-button class="mb-3 mb-sm-0"
                            @click="$router.replace({ name: 'report' })"
@@ -50,6 +44,12 @@
         </div>
       </section>
     </div>
+    <base-alert type="warning">
+      <b>We are looking for help!</b> Covid self report in an Open Source project maintained by volunteers
+      from different countries.<br>You can join us to help : <a class="help-link"
+                                                                href="https://github.com/ch-covid-19/welcome">click
+      here</a>.
+    </base-alert>
   </div>
 </template>
 

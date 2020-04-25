@@ -41,12 +41,15 @@
         </li>
 
         <li class="nav-item">
-          <a v-if="redirectOrg" class="text-white" href="http://covid-self-report.org/">
-            {{ $t('about.title') }}
-          </a>
-          <router-link v-else class="nav-link" :to="{ name: 'about' }">
+          <router-link class="nav-link" :to="{ name: 'about' }">
             {{ $t('about.title') }}
           </router-link>
+        </li>
+
+        <li class="nav-item">
+          <a v-if="redirectOrg" class="nav-link" href="http://covid-self-report.org/" target="_blank">
+            {{ $t('about.org') }}
+          </a>
         </li>
 
       </ul>
