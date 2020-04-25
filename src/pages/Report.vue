@@ -25,8 +25,8 @@
               </div>
             </div>
 
-            <div class="row mt-0">
-              <div class="col-lg-9">
+            <div class="row mt-3">
+              <div class="col-lg-6">
                 <a href="/visualize"> 
                   <button type="button" class="btn btn-info btn-block  d-lg-none d-md-inline mb-4">
                   <i class="fa fa-map"></i> 

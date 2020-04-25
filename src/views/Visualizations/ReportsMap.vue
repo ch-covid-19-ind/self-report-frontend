@@ -72,7 +72,7 @@
             color: 'blue',
             buttonColor: 'info',
             opacity: 0.3,
-            visible: false,
+            visible: true,
           },
           {
             id: 'sick_guess_no_corona',
