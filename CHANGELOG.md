@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.5.1] 2020-04-07
+## [1.5.1] 2020-04-25
 - Visualize button appears in all pages at the top (Always Enabled)
 - Map data point errors fixed
 

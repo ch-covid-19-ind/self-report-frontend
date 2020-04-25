@@ -70,13 +70,14 @@ Please be sure to use 'yarn' instead of 'npm' as package manager.
 
 1. Choose you location selector type (e.g., address or postal-code) (default: postal-code) (only postal code method is available for now)
    - e.g., configuration ``VUE_APP_REPORT_LOCATION_SELECTOR=postal-code``
-1. Setup the data source and geocoding data URLs
-2. Set the map default position and zoom level
-3. Set the recaptcha key (not the secret) with the value from the reCAPTCHA console.
-4. List the languages you need
-5. Set the github repository of your fork for the issues reporting
-6. Set the social links for the desired platforms
-7. Configure the URL for the backend endpoint to your backend instance.
+2. Set the PINCODE length of your country : ``VUE_APP_PINCODE_LENGTH_VALIDATION=6``
+3. Setup the data source and geocoding data URLs
+4. Set the map default position and zoom level
+5. Set the recaptcha key (not the secret) with the value from the reCAPTCHA console.
+6. List the languages you need
+7. Set the github repository of your fork for the issues reporting
+8. Set the social links for the desired platforms
+9. Configure the URL for the backend endpoint to your backend instance.
 
 ### Notes on settng up NPM on Ubuntu ###
 0. Download latest https://nodejs.org/en/download/ and set it to your path (e.g., ~/.bashrc) in ubuntu.

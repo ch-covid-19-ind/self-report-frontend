@@ -16,7 +16,8 @@
     "home": {
         "title": "Home",
         "introTitle": "Help to fight the Coronavirus",
-        "introText": "We aim to provide a visualization of the progression of the Covid-19 pandemic in our country. To do so, we encourage people to report anonymously their own health status to contribute to an open database that is complementary to the official census"
+        "introText": "We aim to provide a visualization of the progression of the Covid-19 pandemic in our country. To do so, we encourage people to report anonymously their own health status to contribute to an open database that is complementary to the official census",
+        "fullMap": "Full map"
     },
     "renewReport": {
         "comingBack": "Thanks for coming back",
@@ -66,7 +67,15 @@
         "sentSomeoneElse": "If you want to file a report for someone else, please use another phone, tablet or computer.",
         "sentMistake": "You've made a mistake ? You can correct it : ",
         "sentMistakeClickHere": "click here",
-        "wantToSeePublicData": "Your contribution helps to build a public dataset. If you want to see the current data, click:"
+        "wantToSeePublicData": "Your contribution helps to build a public dataset. If you want to see the current data, click:",
+        "drAreYouSick": "Are you actually sick from Covid-19?",
+        "drUnknown": "I don't know",
+        "drHaveSymptoms": "Do you have any of the following symptoms?",
+        "drSymptomsDays": "When did you have your first symptoms?",
+        "drSymptomsDaysAgo": "{ignore_days} days ago",
+        "drTested": "Have you been tested for Covid-19?",
+        "drTestedDetails": "Have you been tested by your doctor, at the hospital or by the authorities? ",
+        "drTestResult": "Was the test positive?"
     },
     "locationAddress": {
         "yourPostalCode": "Your postal code is {ignore_postalcode}",
@@ -98,7 +107,7 @@
       "headDataCare": "Disclaimer!",
       "dataCare": "Keep in mind that our dataset is based on self-reporting from peoples thus the data are not official and could contains errors. The data is only intended to be used as an indicator.",
       "headImprovement": "If you have any suggestion",
-      "improvement": "of improvement or you want to report an error, please contact on Facebook."
+      "improvement": "Fpr improvements or you want to report an error, please contact us on Facebook."
     },
     "faq": {
       "title": "FAQ",

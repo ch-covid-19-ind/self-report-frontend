@@ -1,12 +1,9 @@
 <template>
   <div>
-
     <div class="position-relative">
       <!-- shape Hero -->
-      <section class="section-hero section-shaped my-0">
+      <section class="section-shaped my-0">
         <div class="shape shape-style-1 shape-default shape-skew">
-          <span></span>
-          <span></span>
         </div>
         <div class="container shape-container d-flex">
 
@@ -25,144 +22,11 @@
               </div>
             </div>
 
-            <div class="row mt-3">
-              <div class="col-lg-6">
-                <a href="/visualize"> 
-                  <button type="button" class="btn btn-info btn-block  d-lg-none d-md-inline mb-4">
-                  <i class="fa fa-map"></i> 
-                  {{ $t('visualize.title') }}
-                  </button>
-                </a>
-                <p class="text-white">{{ $t('report.intro') }}</p>
+            <report-disease-oriented v-if="reportForm === 'disease'"
+                                     :report-data="reportData"></report-disease-oriented>
 
-                <h1 class="display-3 text-white">{{ $t('report.how') }}</h1>
-
-                <div class="btn-wrapper">
-                  <base-button class="mb-3 mb-sm-0"
-                               @click="reportData.sick = false"
-                               :type="reportData.sick === false ? 'success' : 'white'"
-                               icon="fa fa-heartbeat">
-                    {{ $t('report.healthy') }}
-                  </base-button>
-                  <base-button class="mb-3 mb-sm-0"
-                               @click="reportData.sick = true"
-                               :type="reportData.sick === true ? 'danger' : 'white'"
-                               icon="ni ni-atom">
-                    {{ $t('report.sick') }}
-                  </base-button>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="row mt-3" v-show="reportData.sick === false">
-              <div class="col-lg-6">
-                <h3 class="text-white">{{ $t('report.contract', { disease: disease}) }}</h3>
-
-                <div class="btn-wrapper">
-                  <base-button class="mb-2"
-                               @click="reportData.diagnostic = 0"
-                               :type="reportData.diagnostic === 0 ? 'info' : 'white'">
-                    {{ $t('report.contractNo') }}
-                  </base-button>
-                  <base-button class="mb-2"
-                               @click="reportData.diagnostic = 4"
-                               :type="reportData.diagnostic === 4 ? 'success' : 'white'">
-                    {{ $t('report.contractedProbably') }}
-                  </base-button>
-                  <base-button class="mb-2"
-                               @click="healthyOfficialConfirmModal = true"
-                               :type="reportData.diagnostic === 5 ? 'success' : 'white'">
-                    {{ $t('report.contractedOfficial') }}
-                  </base-button>
-                </div>
-
-                <modal :show.sync="healthyOfficialConfirmModal">
-                  <template slot="header">
-                    <h5 class="modal-title">{{ $t('report.contractedOfficialConfirm') }}</h5>
-                  </template>
-                  <div>
-                    <p>{{ $t('report.contractedOfficialConfirmText', { disease: disease }) }}</p>
-                  </div>
-                  <template slot="footer">
-                    <base-button type="secondary"
-                                 @click="reportData.diagnostic = 4; healthyOfficialConfirmModal = false;">{{
-                      $t('app.no') }}
-                    </base-button>
-                    <base-button type="primary"
-                                 @click="reportData.diagnostic = 5; healthyOfficialConfirmModal = false;">{{
-                      $t('app.yes') }}
-                    </base-button>
-                  </template>
-                </modal>
-
-              </div>
-            </div>
-
-            <div class="row mt-3" v-show="reportData.sick === false && reportData.diagnostic === 0">
-              <div class="col-lg-6">
-                <p class="text-white">{{ $t('report.notSick') }}</p>
-              </div>
-            </div>
-
-            <div class="row mt-3" v-show="reportData.sick === true">
-              <div class="col-lg-6">
-                <h3 class="text-white">{{ $t('report.symptoms') }}</h3>
-
-                <base-button v-for="(symptom) in existingSymptoms" :key="symptom.id"
-                             class="mt-2"
-                             :type="hasSymptom(symptom.id) ? 'info' : 'secondary'"
-                             :icon="`fa fa-${hasSymptom(symptom.id) ? 'check-square' : 'square-o'}`"
-                             @click="setSymptom(symptom.id, !hasSymptom(symptom.id))">
-                  <span>{{ $t(symptom.label) }}</span>
-                </base-button>
-
-              </div>
-            </div>
-
-            <div class="row mt-3" v-show="reportData.sick === true">
-              <div class="col-lg-6">
-                <h3 class="text-white">{{ $t('report.diagnostic') }}</h3>
-
-                <p class="text-white">{{ $t('report.contracted', { disease: disease }) }}</p>
-
-                <base-button class="mt-2"
-                             :type="reportData.diagnostic === 1 ? 'success' : 'secondary'"
-                             @click="reportData.diagnostic = 1">
-                  <span>{{ $t('app.no') }}</span>
-                </base-button>
-
-                <base-button class="mt-2"
-                             :type="reportData.diagnostic === 2 ? 'info' : 'secondary'"
-                             @click="reportData.diagnostic = 2">
-                  <span>{{ $t('report.contractedProbably') }}</span>
-                </base-button>
-
-                <base-button class="mt-2"
-                             :type="reportData.diagnostic === 3 ? 'warning' : 'secondary'"
-                             @click="officialConfirmModal = true">
-                  <span>{{ $t('report.contractedOfficial') }}</span>
-                </base-button>
-
-                <modal :show.sync="officialConfirmModal">
-                  <template slot="header">
-                    <h5 class="modal-title">{{ $t('report.contractedOfficialConfirm') }}</h5>
-                  </template>
-                  <div>
-                    <p>{{ $t('report.contractedOfficialConfirmText', { disease: disease }) }}</p>
-                  </div>
-                  <template slot="footer">
-                    <base-button type="secondary"
-                                 @click="reportData.diagnostic = 2; officialConfirmModal = false;">{{ $t('app.no') }}
-                    </base-button>
-                    <base-button type="primary"
-                                 @click="reportData.diagnostic = 3; officialConfirmModal = false;">{{ $t('app.yes') }}
-                    </base-button>
-                  </template>
-                </modal>
-
-              </div>
-            </div>
+            <report-classic v-else
+                            :report-data="reportData"></report-classic>
 
             <div class="row mt-3" v-show="reportData.sick !== null">
               <div class="col-lg-6">
@@ -208,7 +72,7 @@
                 <p>{{ sendError }}</p>
                 <p>
                   Please try again. If it still occurs, please
-                  <base-button size="sm" type="info" @click="githubIssue">report a problem</base-button>
+                  <base-button size="sm" type="info" @click="contact">contact us</base-button>
                   .
                 </p>
 
@@ -228,21 +92,35 @@
 
           <div v-else class="text-white">
 
-            <h3 class="text-white">{{ $t('report.sentThanks') }}</h3>
-            <p>{{ $t('report.sentComeBack') }}</p>
-            <p>
-              {{ $t('report.wantToSeePublicData') }}
-              <base-button size="sm" @click="$router.replace({ name: 'visualize' })" type="info">
-                {{ $t('visualize.title') }}
-              </base-button>
-            </p>
-            <p>{{ $t('report.sentSomeoneElse') }}</p>
-            <p>
-              {{ $t('report.sentMistake') }}
-              <base-button size="sm" @click="forceReportAgain = true" type="info">
-                {{ $t('report.sentMistakeClickHere') }}
-              </base-button>
-            </p>
+            <div v-if="!medicalForm">
+              <h3 class="text-white">{{ $t('report.sentThanks') }}</h3>
+
+              <p v-if="medicalFormEnabled">
+                Take medical form
+                <base-button size="sm" @click="medicalForm = true" type="info">
+                  GO
+                </base-button>
+              </p>
+
+              <p>{{ $t('report.sentComeBack') }}</p>
+              <p>
+                {{ $t('report.wantToSeePublicData') }}
+                <base-button size="sm" @click="$router.replace({ name: 'visualize' })" type="info">
+                  {{ $t('visualize.title') }}
+                </base-button>
+              </p>
+              <p>{{ $t('report.sentSomeoneElse') }}</p>
+              <p>
+                {{ $t('report.sentMistake') }}
+                <base-button size="sm" @click="forceReportAgain = true" type="info">
+                  {{ $t('report.sentMistakeClickHere') }}
+                </base-button>
+              </p>
+            </div>
+            <div v-else>
+              <report-medical></report-medical>
+            </div>
+
           </div>
         </div>
       </section>
@@ -255,59 +133,45 @@
   import {v4 as uuidv4} from 'uuid';
 
   import Modal from '@/components/Modal';
-  import newGithubIssueUrl from 'new-github-issue-url';
+
   import LocationFromPostalCode from '../views/LocationEditors/LocationFromPostalCode';
   import LocationFromAddress from '../views/LocationEditors/LocationFromAddress';
+  import ReportClassic from "../views/ReportForms/Classic";
+  import ReportDiseaseOriented from "../views/ReportForms/DiseaseOriented";
+  import ReportMedical from "../views/ReportForms/Medical";
 
   export default {
     name: 'report',
     components: {
+      ReportMedical,
+      ReportDiseaseOriented,
+      ReportClassic,
       LocationFromAddress,
       LocationFromPostalCode,
       Modal
     },
     data() {
       return {
-        disease: 'Covid-19',
-        existingSymptoms: [
-          {id: 'fever', label: 'report.symptomFever'},
-          {id: 'cough', label: 'report.symptomCough'},
-          {id: 'vomit', label: 'report.symptomVomit'},
-          {id: 'dyspnea', label: 'report.symptomDyspnea'},
-          {id: 'weakness', label: 'report.symptomWeakness'},
-          {id: 'headache', label: 'report.symptomHeadache'},
-          {id: 'cold', label: 'report.symptomCold'},
-          {id: 'diarrhoea', label: 'report.symptomDiarrhoea'},
-          {id: 'taste_smell', label: 'report.symptomTasteSmell'},
-          {id: 'others', label: 'report.symptomOthers'},
-        ],
-        officialConfirmModal: false,
-        healthyOfficialConfirmModal: false,
         sendErrorModal: false,
         sendError: '',
         forceReportAgain: false,
 
         locationSelector: process.env.VUE_APP_REPORT_LOCATION_SELECTOR,
+        reportForm: process.env.VUE_APP_REPORT_FORM,
+        medicalFormEnabled: process.env.VUE_APP_REPORT_FORM_MEDICAL,
+        medicalForm: false,
         validLocation: false,
 
         reportData: {
           sessionId: null,
           sick: null,
           symptoms: [],
+          symptomsDays: 0,
           diagnostic: null,
           postalCode: null,
           lastReport: null,
         },
         sending: false,
-
-        /*
-        * 0 = not sick
-        * 1 = sick without Covid
-        * 2 = sick probably with Covid
-        * 3 = sick with Covid confirmed
-        * 4 = recovered (Covid guess)
-        * 5 = recovered (Covid official)
-        */
       }
     },
     computed: {
@@ -345,60 +209,79 @@
       send: async function (event) {
 
         this.sending = true;
-
-        this.reportData.symptoms = this.reportData.symptoms.filter(s => s !== '');
-
-        let symptoms = [];
-        switch (this.reportData.diagnostic) {
-          case 1:
-          case 2:
-          case 3:
-            symptoms = this.reportData.symptoms;
-        }
-
         try {
+          this.reportData.symptoms = this.reportData.symptoms.filter(s => s !== '');
 
-          await this.$recaptchaLoaded();
+          let symptoms = [];
+          switch (this.reportData.diagnostic) {
+            case 1:
+            case 2:
+            case 3:
+              symptoms = this.reportData.symptoms;
+          }
 
-          // Execute reCAPTCHA with action "report".
-          const token = await this.$recaptcha('report');
+          try {
+            await this.$recaptchaLoaded();
+          } catch (error) {
+            console.error(error);
+            this.sendError = `There was a problem loading the reCAPTCHA.`;
+            this.sendErrorModal = true;
+            return;
+          }
 
-          const headers = new Headers();
-          headers.append("Content-Type", "application/json");
+          try {
+            // Execute reCAPTCHA with action "report".
+            const token = await this.$recaptcha('report');
+          } catch (error) {
+            console.error(error);
+            this.sendError = `There was a problem getting the reCAPTCHA token.`;
+            this.sendErrorModal = true;
+            return;
+          }
 
-          const response = await fetch(process.env.VUE_APP_API_ENDPOINT_REPORT, {
-            method: 'POST',
-            headers,
-            mode: 'cors',
-            cache: 'default',
-            body: JSON.stringify({
-              token: token,
-              locator: this.reportData.postalCode,
-              sessionId: this.reportData.sessionId,
-              symptoms: symptoms,
-              diagnostic: this.reportData.diagnostic,
-              appVersion: process.env.VERSION,
-            }),
-          });
+          try {
+            const headers = new Headers();
+            headers.append("Content-Type", "application/json");
 
-          if (!response.ok) {
-            throw new Error('could not report');
+            const response = await fetch(process.env.VUE_APP_API_ENDPOINT_REPORT, {
+              method: 'POST',
+              headers,
+              mode: 'cors',
+              cache: 'default',
+              body: JSON.stringify({
+                token: token,
+                locator: this.reportData.postalCode,
+                sessionId: this.reportData.sessionId,
+                symptoms: symptoms,
+                symptomsDays: this.reportData.symptomsDays,
+                diagnostic: this.reportData.diagnostic,
+                appVersion: process.env.VERSION,
+              }),
+            });
+
+            console.log(response);
+
+            if (!response.ok) {
+              throw new Error('could not report');
+            }
+
+            this.forceReportAgain = false;
+
+            window.scrollTo({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            });
+
+          } catch (error) {
+            console.error(error);
+            this.sendError = `There was a problem when sending your data: ${error}`;
+            this.sendErrorModal = true;
           }
 
           this.reportData.lastReport = new Date();
-
           localStorage.setItem('report-data', JSON.stringify(this.reportData));
-          this.forceReportAgain = false;
 
-          window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-          });
-
-        } catch (error) {
-          this.sendError = error;
-          this.sendErrorModal = true;
         } finally {
           this.sending = false;
         }
@@ -422,20 +305,14 @@
           sessionId: null,
           sick: null,
           symptoms: [],
+          symptomsDays: 0,
           diagnostic: null,
           postalCode: '',
           lastReport: null,
         }
       },
-      githubIssue: async function () {
-        const url = newGithubIssueUrl({
-          user: process.env.VUE_APP_GITHUB_REPO_OWNER,
-          repo: process.env.VUE_APP_GITHUB_REPO_NAME,
-          title: 'Error when sending from the front-end',
-          body: `The error is:\n> ${this.sendError}\n\n---\nAuto-generated from the front-end`
-        });
-
-        await open(url);
+      contact: async function () {
+        await open(process.env.VUE_APP_SOCIAL_FACEBOOK);
       }
     }
   };

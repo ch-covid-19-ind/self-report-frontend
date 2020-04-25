@@ -31,13 +31,7 @@
 
         <li class="nav-item">
           <router-link class="nav-link" :to="{ name: 'visualize' }">
-            <button type="button" class="btn btn-info btn-sm d-sm-none d-none d-lg-inline">
-              <i class="fa fa-map"></i> 
-              {{ $t('visualize.title') }}
-            </button>
-            <span class="d-md-inline d-lg-none">
-              {{ $t('visualize.title') }}
-            </span>
+            {{ $t('visualize.title') }}
           </router-link>
         </li>
         <li class="nav-item">
@@ -47,7 +41,10 @@
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" :to="{ name: 'about' }">
+          <a v-if="redirectOrg" class="text-white" href="http://covid-self-report.org/">
+            {{ $t('about.title') }}
+          </a>
+          <router-link v-else class="nav-link" :to="{ name: 'about' }">
             {{ $t('about.title') }}
           </router-link>
         </li>
@@ -116,6 +113,11 @@
       BaseNav,
       CloseButton,
       BaseDropdown
+    },
+    data() {
+      return {
+        redirectOrg: process.env.VUE_APP_ABOUT_REDIRECT_ORG === 'true',
+      }
     },
     methods: {
       setLocale: function (locale) {

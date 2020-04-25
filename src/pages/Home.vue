@@ -2,7 +2,7 @@
   <div>
     <div class="position-relative">
       <!-- shape Hero -->
-      <section class="section-hero section-shaped my-0">
+      <section class="section-shaped my-0">
         <div class="shape shape-style-1 shape-default shape-skew">
           <span></span>
           <span></span>
@@ -15,11 +15,25 @@
 
               <p class="text-white">{{ $t('home.introText') }}</p>
 
+              <base-alert type="warning">
+                <b>We are looking for help!</b> Covid self report in an Open Source project maintained by volunteers
+                from different countries.<br>You can join us to help : <a class="help-link"
+                                                                          href="https://github.com/ch-covid-19/welcome">click
+                here</a>.
+              </base-alert>
+
               <base-button class="mb-3 mb-sm-0"
                            @click="$router.replace({ name: 'report' })"
                            type="white"
                            icon="fa fa-send">
                 {{ $t('report.title') }}
+              </base-button>
+
+              <base-button class="mb-3 mb-sm-0"
+                           @click="$router.replace({ name: 'visualize' })"
+                           type="white"
+                           icon="fa fa-map">
+                {{ $t('home.fullMap') }}
               </base-button>
             </div>
 
@@ -48,12 +62,11 @@
     computed: {
       lastDayReports() {
 
-        if (!this.$store.state.reports) {
+        if (!this.$store.state.reports || !this.$store.state.reportsLastDay) {
           return null;
         }
 
-        return this.$store.state.reports
-          .filter(d => d.date === this.$store.state.reportsLastDay);
+        return this.$store.state.reports[this.$store.state.reportsLastDay.toISODate()];
       }
     }
   };
@@ -61,5 +74,8 @@
 </script>
 
 <style scoped>
-
+  .help-link {
+    color: white;
+    text-decoration: underline;
+  }
 </style>
