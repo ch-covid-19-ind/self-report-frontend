@@ -20,7 +20,7 @@
                            @click="$router.replace({ name: 'report' })"
                            type="white"
                            icon="fa fa-send">
-                {{ $t('report.title') }}
+                {{ $t('report.longtitle') }}
               </base-button>
 
               <base-button class="mb-3 mb-sm-0"

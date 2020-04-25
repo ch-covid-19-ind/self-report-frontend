@@ -28,7 +28,8 @@
         "ifNotYou": "if it wasn't you."
     },
     "report": {
-        "title": "Report Health Status",
+        "title": "Report",
+        "longtitle": "Report Health Status",
         "intro": "Help fighting against the new Coronavirus in India by self-reporting your health status.",
         "how": "How are you doing?",
         "healthy": "I'm healthy",

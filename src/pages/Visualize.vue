@@ -21,6 +21,13 @@
 
             <p>{{ $t('visualize.dataWarning') }}</p>
 
+            <base-button class="mb-3 mb-sm-0"
+                          @click="$router.replace({ name: 'report' })"
+                          type="white"
+                          icon="fa fa-send">
+              {{ $t('report.longtitle') }}
+            </base-button>            
+
             <div class="row my-3 align-baseline">
               <div class="col-auto">
                 <i v-if="dateFilter !== datePickerFormat.minDate" class="fa fa-chevron-left my-3 click-cursor"

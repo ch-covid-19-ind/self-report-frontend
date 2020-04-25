@@ -37,9 +37,11 @@
             <h3 class="text-white">{{ $t(`faq.othersQuestion7`, {disease: 'Covid-19'}) }}</h3>
             <p>{{ $t(`faq.othersResponse7`, {disease: 'Covid-19'}) }}</p>
 
-          </div>
+          </div>              
         </div>
+        
       </section>
+
     </div>
 
   </div>
